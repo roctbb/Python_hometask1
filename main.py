@@ -1,5 +1,4 @@
 import sys
-import csv
 import xml.dom.minidom
 import time
 start = time.time()
@@ -47,8 +46,10 @@ for k in range(nodesnum):
                     matrix[i][j] = float('inf')
                 else:
                     matrix[i][j] = 1/(a+b)
-wr = csv.writer(open(sys.argv[2], "w"), delimiter=',')
+ans_file = open(sys.argv[2], 'w')
 for row in matrix:
-    wr.writerow(row)
+    for column in row:
+        ans_file.write("{:25.6f}, ".format(column))
+    ans_file.write("\n")
 finish = time.time()
 print (finish - start)
