@@ -51,9 +51,9 @@ for k in range(nodesnum):
 ans_file = open(sys.argv[2], 'w')
 finish = time.time()
 
-start_time = time()
+start_time = time.time()
 resistance.calculate(matrixc)
-c_time = time() - start_time
+c_time = time.time() - start_time
 print("Python was {} times slower".format((finish - start) / c_time))
 for row in matrix:
     for column in row:
