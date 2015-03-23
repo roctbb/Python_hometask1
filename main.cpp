@@ -41,7 +41,7 @@ static PyObject * calculate(PyObject *module, PyObject *args)
 PyMODINIT_FUNC PyInit_resistance()
 {
 	static PyMethodDef ModuleMethods[] = {
-		{ "Resistance calculation", calculate, METH_VARARGS,
+		{ "calculate", calculate, METH_VARARGS,
 				"Arguments:\n"
 				"a square matrix"
 		},
