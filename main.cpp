@@ -49,7 +49,7 @@ PyMODINIT_FUNC PyInit_resistance()
 	};
 	static PyModuleDef ModuleDef = {
 		PyModuleDef_HEAD_INIT,
-		"resistancecalc",
+		"resistance",
 		"Resistance calculation.",
 		-1, ModuleMethods, 
 		NULL, NULL, NULL, NULL
